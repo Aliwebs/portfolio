@@ -1,0 +1,241 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* background-image: url('/images/hero_background.jpg'); */
+
+  color: white;
+  font-family: 'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+#home {
+  background-color: black;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+nav ul a {
+  padding: 20px;
+  color: inherit;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main h2 {
+  font-size: xx-large;
+  color: inherit;
+}
+
+main h2 span {
+  color: orange;
+}
+
+#about {
+  background-color: orange;
+  color: black;
+}
+
+#about section {
+  height: 80vh;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#about div {
+  margin: 20px;
+  align-self: center;
+}
+
+#about div hr {
+  background-color: black;
+  border: none;
+  padding: 2px;
+}
+
+#about div p {
+  text-align: center;
+}
+
+#about div img {
+  width: 200px;
+}
+
+#skills h1 {
+  text-align: center;
+}
+
+#skills {
+  background-color: black;
+  color: white;
+
+}
+
+#skills main {
+  margin-top: 100px;
+}
+
+#skills section {
+  height: 80vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills div i {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.icons-large {
+  font-size: 9em;
+}
+
+.icons-medium {
+  font-size: 4.5em;
+}
+
+#projects {
+  background-color: orange;
+  color: white;
+}
+
+#projects main {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+#projects section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 10px auto;
+}
+
+#projects section:nth-child(2),
+#projects section:last-child {
+  justify-self: right;
+  align-self: center;
+}
+
+#projects section div {
+  padding: 5px 20px;
+}
+
+#projects div button {
+  border: none;
+  background-color: black;
+  margin: 5px 20px;
+  padding: 10px 20px;
+}
+
+#projects div button:hover {
+  background-color: rgb(129, 85, 2);
+}
+
+#projects div button i {
+  font-size: inherit;
+  color: white;
+}
+
+#projects div button a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  color: white;
+}
+
+
+#projects section img {
+  width: 400px;
+}
+
+#contact {
+  background-color: black;
+  color: white;
+}
+
+#contact main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact main div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact button {
+  border: none;
+  font-size: 2em;
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+#contact button a,
+#contact button i {
+  color: black;
+  font-size: inherit;
+}
+
+.slide {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100vw;
+  bottom: 0;
+  opacity: 0;
+  z-index: 10;
+  background-color: rgb(8, 5, 5);
+  transition: left 0.5s ease-out;
+}
+
+.slide.is-active {
+  opacity: 1;
+  left: 0;
+}
