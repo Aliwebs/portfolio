@@ -35,6 +35,10 @@ a {
   color: white;
 }
 
+ul li {
+  line-height: 2em;
+}
+
 nav ul {
   margin-top: 30px;
   list-style: none;
@@ -70,17 +74,18 @@ main h2 span {
 }
 
 #about section {
-  height: 80vh;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
+}
+
+#about section div:first-child {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
 }
 
 #about div {
-  margin: 20px;
-  align-self: center;
+  margin: 10px 20px;
 }
 
 #about div hr {
@@ -90,7 +95,12 @@ main h2 span {
 }
 
 #about div p {
-  text-align: center;
+  text-align: justify;
+  line-height: 2em;
+}
+
+#about section li {
+  margin: 10px;
 }
 
 #about div img {
@@ -111,26 +121,40 @@ main h2 span {
   margin-top: 100px;
 }
 
-#skills section {
-  height: 80vh;
-  width: 80%;
-  margin: 0 auto;
+.icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 2000px;
+}
+
+.icons p {
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#skills div i {
-  display: inline-block;
-  margin: 10px 5px;
+.icons i {
+  margin: 10px 0;
+  font-size: 5em;
 }
 
-.icons-large {
-  font-size: 9em;
+.icons i span {
+  font-size: 1em;
+  text-align: center;
 }
 
-.icons-medium {
-  font-size: 4.5em;
+.tech-used {
+  margin: 0px;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.tech-used i {
+  margin: 0px 2px;
+  font-size: 1em;
 }
 
 #projects {
@@ -150,24 +174,39 @@ main h2 span {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 60%;
   margin: 10px auto;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: -8px;
+  color: black;
 }
 
 #projects section:nth-child(2),
 #projects section:last-child {
   justify-self: right;
   align-self: center;
+  background-color: black;
+  color: white;
+}
+
+#projects section:nth-child(2) button,
+#projects section:last-child button {
+  color: white;
+  background-color: orange;
 }
 
 #projects section div {
-  padding: 5px 20px;
+  padding: 10px 20px;
+  margin: 0px;
+  height: 100%;
+
 }
 
 #projects div button {
   border: none;
   background-color: black;
-  margin: 5px 20px;
+  margin: 5px auto;
   padding: 10px 20px;
 }
 
@@ -186,6 +225,11 @@ main h2 span {
   color: white;
 }
 
+
+#projects div p {
+  line-height: 2em;
+  font-size: 1.2em;
+}
 
 #projects section img {
   width: 400px;
@@ -238,4 +282,25 @@ main h2 span {
 .slide.is-active {
   opacity: 1;
   left: 0;
+}
+
+.profile-circle {
+  border: none;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+  background-image: url('../images/profile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 468px) {
+  nav {
+    display: none;
+  }
+
+  main section {
+    width: auto !important;
+  }
 }
